@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掘金</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        @media (max-width: 600px) {
+            .desc{
+            display:none !important;
+                    }
+        }
+        .remove{
+            display:none !important;
+        }
+        .header-active{
+                    border: 0;
+                    padding: 5px 6px;
+                    color: #515767;
+                    background-color: #f2f3f5;
+                    font-weight: 500;
+        }
+        .catalog-active{
+                    border: 0;
+                    padding: 5px 6px;
+                    color: #515767;
+                    background-color: #f2f3f5;
+                    font-weight: 500;
+        }
+        .filter-active{
+            color: #1e80ff !important;
+        }
+        .top-active{
+            border-top: 3px solid #1e80ff !important;
+        }
+        .bottom-active{
+            border-bottom: 3px solid #1e80ff !important;
+        }
+        .juejin{
+
+        }
+        .vip{
+
+        }
+        .lazy{
+                position: relative;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+        .vip-level{
+                height:16px; 
+                width:35px;
+                display: inline-block;
+                vertical-align: top;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }       
+        /* .oa{
+            float:left;
+            padding: 4px 6px;
+            line-height: 20px;
+            margin-right: 16px;
+        }
+        .cataloglist{
+            float:left;
+        }
+        .cataloglist a{
+            border: 1px solid #e4e6eb80;
+            border-radius: 8px;
+            padding: 4px 6px;
+            line-height: 20px;
+            margin-right: 16px;
+        }
+        .cataloglist-last a{
+            margin-right: 0px;
+        } */
+    </style>
+</head>
+<body>
+    <div class = 'box'>
+        <!-- 最外面的包裹元素 -->
+    <div class="wrapper">
+        <!-- 头部 -->
+        <div class="header">
+            <!-- 左半部分 -->
+            <div class="header-left">
+                <a>课程：</a>
+                <ul>
+                    <li class='juejin'><a href="javascript:;" class="header-active">掘金小册</a></li>
+                    <li class='vip'>
+                        <a href="javascript:;">字节内部课</a>
+                        <svg width="44" height="16" viewBox="0 0 44 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-vip-free" data-v-a9fad7a8=""><path d="M0 9.625C0 4.30926 4.30926 0 9.625 0H36C40.4183 0 44 3.58172 44 8C44 12.4183 40.4183 16 36 16H0V9.625Z" fill="#F6E7CB" data-v-a9fad7a8=""></path><path d="M4.05 4.86L6.61 12H7.93L10.49 4.86H9.31L7.29 10.78H7.26L5.23 4.86H4.05ZM11.263 4.86V12H12.343V4.86H11.263ZM13.7625 4.86V12H14.8525V9.22H16.7025C18.4125 9.22 19.2725 8.49 19.2725 7.03C19.2725 5.58 18.4225 4.86 16.7225 4.86H13.7625ZM14.8525 5.79H16.6325C17.1625 5.79 17.5525 5.89 17.8025 6.09C18.0525 6.27 18.1825 6.59 18.1825 7.03C18.1825 7.47 18.0525 7.79 17.8125 7.99C17.5625 8.19 17.1725 8.29 16.6325 8.29H14.8525V5.79ZM21.2259 7V9.69H23.6059C23.5659 9.77 23.5159 9.86 23.4759 9.96C22.9359 10.89 21.8159 11.68 20.0959 12.32L20.6959 13.06C22.6559 12.3 23.8859 11.34 24.4059 10.2C24.4859 10.04 24.5559 9.87 24.6159 9.69H24.9659V11.71C24.9659 12.49 25.3059 12.88 25.9959 12.88H27.9859C28.3459 12.88 28.6059 12.79 28.7759 12.61C28.9559 12.41 29.0759 11.82 29.1559 10.82L28.2559 10.53C28.2359 11.22 28.1859 11.63 28.1059 11.77C28.0459 11.89 27.9459 11.96 27.8059 11.96H26.2859C26.0359 11.96 25.9159 11.81 25.9159 11.51V9.69H28.1759V6.48H25.8859C26.2359 6.16 26.5859 5.77 26.9459 5.32V4.6H23.6059C23.7559 4.39 23.9059 4.18 24.0459 3.96L23.0859 3.75C22.2459 4.99 21.2459 5.95 20.0659 6.65L20.6659 7.38C20.8559 7.26 21.0459 7.13 21.2259 7ZM24.6959 6.48H21.8759C22.2359 6.17 22.5759 5.83 22.9159 5.46H25.7159C25.3759 5.84 25.0359 6.18 24.6959 6.48ZM27.2659 8.8H24.8759C24.9659 8.36 25.0259 7.88 25.0459 7.36H27.2659V8.8ZM23.8959 8.8H22.1459V7.36H24.0959C24.0659 7.88 23.9959 8.36 23.8959 8.8ZM31.8559 6.21H32.9959C32.9759 6.38 32.9459 6.54 32.9059 6.7H31.7159L31.8559 6.21ZM33.9159 6.21H35.2159V6.7H33.8559C33.8859 6.54 33.9059 6.38 33.9159 6.21ZM36.1359 6.21H38.2559V4.22H36.1359V3.78H35.2159V4.22H33.9259V3.78H33.0059V4.22H30.7859V4.99H33.0059V5.48H31.0859L30.6959 7.42H32.5159C32.4959 7.44 32.4659 7.48 32.4259 7.52C32.0659 7.86 31.3859 8.14 30.3759 8.36L30.8559 9.1C31.0759 9.05 31.2859 8.99 31.4859 8.93V11.43H32.4159V9.49H37.0159V11.43H37.9559V8.65H32.2459C32.6159 8.47 32.9159 8.28 33.1459 8.06C33.3259 7.88 33.4759 7.66 33.6059 7.42H35.2159V8.46H36.1359V7.42H37.8759C37.8759 7.58 37.8459 7.69 37.7959 7.77C37.7359 7.84 37.5759 7.88 37.3159 7.88C37.1459 7.88 36.9659 7.87 36.7859 7.85L36.9559 8.5C37.1059 8.51 37.2659 8.52 37.4259 8.52C38.0059 8.51 38.3759 8.4 38.5359 8.18C38.6959 7.97 38.7759 7.48 38.7759 6.7H36.1359V6.21ZM33.9259 4.99H35.2159V5.48H33.9259V4.99ZM36.1359 4.99H37.3759V5.48H36.1359V4.99ZM35.3259 11.23L34.8459 11.95C36.0459 12.23 37.2059 12.61 38.3359 13.11L38.8559 12.32C37.7959 11.89 36.6159 11.53 35.3259 11.23ZM34.2159 9.74C34.1359 10.6 33.8859 11.21 33.4459 11.57C32.9459 11.93 31.9059 12.14 30.3359 12.21L30.7159 13.06C32.5759 12.92 33.7559 12.6 34.2559 12.12C34.7259 11.74 35.0259 10.98 35.1559 9.83L34.2159 9.74Z" fill="#7E5D25"></path></svg>
+                    </li>
+                </ul>
+            </div>
+            <!-- 左半部分结束 -->
+            <!-- 右半部分开始 -->
+            <div class="header-right">
+                <svg data-v-a9fad7a8="" data-v-0f9eb81c="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-search"><path data-v-a9fad7a8="" data-v-0f9eb81c="" fill-rule="evenodd" clip-rule="evenodd" d="M17.0881 10.8659C17.0881 14.1944 14.3898 16.8928 11.0612 16.8928C7.73269 16.8928 5.03438 14.1944 5.03438 10.8659C5.03438 7.53737 7.73269 4.83906 11.0612 4.83906C14.3898 4.83906 17.0881 7.53737 17.0881 10.8659ZM16.3575 16.6287C14.9638 17.9103 13.1039 18.6928 11.0612 18.6928C6.73857 18.6928 3.23438 15.1886 3.23438 10.8659C3.23438 6.54326 6.73857 3.03906 11.0612 3.03906C15.3839 3.03906 18.8881 6.54326 18.8881 10.8659C18.8881 12.5131 18.3793 14.0414 17.5103 15.3022C17.5848 15.3427 17.6548 15.3944 17.7178 15.4574L20.5035 18.2431C20.855 18.5945 20.855 19.1644 20.5035 19.5159C20.152 19.8673 19.5822 19.8673 19.2307 19.5159L16.445 16.7301C16.4129 16.698 16.3837 16.6641 16.3575 16.6287Z" fill="#515767"></path></svg>
+            </div>
+            <!-- 右半部分结束 -->
+        </div>
+        <!-- 头部结束 -->
+        <!-- 目录开始 -->
+        <div class="catalog">
+            <a></a>
+            <ul>
+            </ul>
+        <!-- 目录结束 -->
+        </div>
+        <!-- 筛选器开始 -->
+        <div class="filter">
+            <!-- 左半部分开始 -->
+            <div class="filter-left">
+                <ul>
+                    <li><a href="javascript:;" class="filter-active">全部</a></li>
+                    <li><a href="javascript:;">最新</a></li>
+                    <li><a href="javascript:;">热销</a></li>
+                    <li><a href="javascript:;">
+                        <span>价格</span>
+                        <div class="triangle-content">
+                            <div class="bottom-triangle">
+                            </div>
+                            <div class="top-triangle">
+                            </div>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- 左半部分结束 -->
+            <!-- 右半部分开始 -->
+            <div class="filter-right">
+                <div class="checkbox-wrap">
+                    <label style="width:14px;height:14px;">
+                        <input type="checkbox">
+                    </label>
+                </div>
+                <span>只看VIP课程</span>
+            </div>
+            <!-- 右半部分结束 -->
+        </div>
+        <!-- 筛选器结束 -->
+        <!-- 内容开始 -->
+        <div class="content">
+            
+        </div>
+        <!-- 内容结束 -->
+    </div>
+    </div>
+    
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type = "module" src="js/index.js"></script>
+</body>
+</html>
