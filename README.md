@@ -9,3 +9,5 @@ api.juejin.cn reqCors://https://e.juejin.cn
 api.juejin.cn resCors://*
 *.byteimg.com referer://https://juejin.cn/course
 ```
+
+### Creating a new branch is quick.
